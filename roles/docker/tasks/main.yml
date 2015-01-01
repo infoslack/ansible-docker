@@ -1,0 +1,16 @@
+---
+- name: Add the key to sign the Docker packages and repo
+  apt_key: keyserver=keyserver.ubuntu.com id={{docker_url_id}}
+
+- name: Add repository for install latest version of Docker
+  apt_repository: >
+    repo='{{docker_repo_install}}'
+    state=present
+
+- name: Install Docker
+  apt: >
+    pkg=lxc-docker
+    update_cache=yes
+    cache_valid_time=3600
+    state=latest
+    force=yes

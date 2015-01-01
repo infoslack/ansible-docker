@@ -1,0 +1,10 @@
+---
+- name: Server Containers
+  hosts: docker
+  sudo: yes
+  user: ubuntu
+
+  roles:
+    - common
+    - docker
+    - fig

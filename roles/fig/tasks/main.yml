@@ -1,0 +1,3 @@
+---
+- name: Install Fig
+  pip: name=fig state=latest

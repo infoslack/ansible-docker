@@ -1,0 +1,8 @@
+---
+- name: Install extra packages
+  apt: "pkg={{item}} state=latest force=yes update_cache=yes"
+  with_items:
+    - build-essential
+    - git
+    - python-pip
+  tags: setup
