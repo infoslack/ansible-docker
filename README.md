@@ -1,7 +1,9 @@
 ansible-docker
 ==============
 
-Recipe for Ansible install Docker and Fig
+[![Build Status](https://travis-ci.org/infoslack/ansible-docker.svg?branch=master)](https://travis-ci.org/infoslack/ansible-docker)
+
+Recipe for Ansible install Docker
 
 ### Setup
 
