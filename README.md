@@ -10,7 +10,7 @@ Recipe for Ansible install Docker and Fig
 	$ cp hosts.example hosts
 
 - Edit `hosts` and include the name servers;
-- You chan chage the rules or the order of execution in `server.yml`
+- You can chage the rules or the order of execution in `server.yml`
 
 ### Run
 
