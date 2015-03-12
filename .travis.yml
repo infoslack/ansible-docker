@@ -10,14 +10,14 @@ install:
 
 script:
   # check the syntax playbook
-  - ansible-playbook -i tests/inventory tests/test.yml --syntax-check
+  - ansible-playbook -i inventory test.yml --syntax-check
 
   # run the playbook with ansible-playbook
-  - "ansible-playbook -i tests/inventory tests/test.yml --connection=local --sudo"
+  - "ansible-playbook -i inventory test.yml --connection=local --sudo"
 
   # run again, checking it's idempotent
   - >
-    ansible-playbook -i tests/inventory tests/test.yml --connection=local --sudo
+    ansible-playbook -i inventory test.yml --connection=local --sudo
     | grep -q 'changed=0.*failed=0'
     && (echo 'Idempotence test: pass' && exit 0)
     || (echo 'Idempotence test: fail' && exit 1)
