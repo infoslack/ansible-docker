@@ -6,3 +6,14 @@
     - git
     - python-pip
   tags: setup
+
+- name: Create group to docker
+  group: name=docker state=present
+
+- name: Create the docker group and add your user
+  user: >
+    name=ubuntu
+    group=docker
+    append=yes
+    state=present
+  tags: setup

@@ -1,3 +1,9 @@
 ---
-docker_repo_install: 'deb https://get.docker.com/ubuntu docker main'
-docker_url_id: '36A1D7869245C8950F966E92D8576A8BA88D21E9'
+# docker
+docker_repo: 'deb https://apt.dockerproject.org/repo ubuntu-trusty main'
+
+keyserver_url: 'p80.pool.sks-keyservers.net'
+keyserver_id: '58118E89F3A912897C070ADBF76221572C52609D'
+
+# docker-compose
+c_version: '1.5.1'
